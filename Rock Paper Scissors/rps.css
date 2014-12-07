@@ -77,12 +77,12 @@ img:hover {
 	font-size: 20px;
 }
 
-.highlighted, .highlighted_user {
+.highlighted_user {
 	border: 3px solid #45d3f7;
 
 }
 
-.highlighted, .highlighted_computer {
+.highlighted_computer {
 	border: 3px solid #f71a0e;
 
 }
