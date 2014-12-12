@@ -1,0 +1,27 @@
+#header, #button, p {
+	font-family: sans-serif;;
+	font-size: 2em;
+}
+
+#header {
+	margin: auto;
+}
+
+#button {
+	border-radius: 10px;
+	border: 2px solid black;
+	background: #00ffcb;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#box {
+	width: 150px;
+	height: 150px;
+	display: none;
+	position: relative;
+	
+}
