@@ -37,10 +37,10 @@ function boxAppear() {
 	$('#box').css({'top':top});
 
 	//randomly change size
-	var size = Math.random() * 150;
+	var size = Math.random() * 200;
 
-	if (size < 40) {
-		var size = Math.random() * 150;
+	if (size < 50) {
+		var size = Math.random() * 200;
 	}
 
 	$('#box').css({'width': size});
@@ -81,6 +81,7 @@ function gameOver() {
 				$('#fastest').html(fastestTime);
 				$('#gameover').show();
 				count = 0;
+				totalTime = 0;
 			}
 //start on click of button		
 function start() {
