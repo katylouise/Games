@@ -3,7 +3,7 @@ body {
 	font-size: 2em;
 }
 
-#instructions {
+#instructions, #gameover {
 	position: relative;
 	margin: 0 auto;
 	width: 500px;
@@ -14,9 +14,12 @@ body {
 	padding: 10px;
 }
 
-#instructions p {
+p {
 	text-align: center;
+}
 
+#gameover {
+	display: none;
 }
 
 button {
