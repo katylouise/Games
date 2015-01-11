@@ -19,32 +19,35 @@ function boxAppear() {
 	var g = Math.floor(Math.random() * 255);
 	var b = Math.floor(Math.random() * 255);
 	$('#box').css({'background':'rgb(' + r + ',' + g + ',' + b + ')'});
-	//create circles or squares
+	
 	var shape = Math.random();
-
-	if (shape < 0.5) {
-		$('#box').css({'border-radius': '0px'});
-	}
-
-	else {
-		$('#box').css({'border-radius': '75px'});
-	}
-	//randomly position shape
-	var top = Math.random() * 250;
-	var left = Math.random() * 900;
-
-	$('#box').css({'left':left});
-	$('#box').css({'top':top});
 
 	//randomly change size
 	var size = Math.random() * 200;
 
 	if (size < 50) {
-		var size = Math.random() * 200;
+		var size = (Math.random() + 1) * 100;
 	}
 
 	$('#box').css({'width': size});
 	$('#box').css({'height': size});
+
+//create circles or squares
+	if (shape < 0.5) {
+		$('#box').css({'border-radius': '0px'});
+	}
+
+	else {
+		$('#box').css({'border-radius': size});
+	}
+	//randomly position shape
+	var top = Math.random() * 400;
+	var left = Math.random() * 1000;
+
+	$('#box').css({'left':left});
+	$('#box').css({'top':top});
+
+	
 
 }
 //disappear box on clicking
@@ -76,12 +79,13 @@ function boxDisappear() {
 function gameOver() {
 				$('#your_time').hide();
 
-				averageTime = totalTime / 10;
+				averageTime = (totalTime / 10).toFixed(3);
 				$('#average').html(averageTime);
 				$('#fastest').html(fastestTime);
 				$('#gameover').show();
 				count = 0;
 				totalTime = 0;
+				fastestTime = 100;
 			}
 //start on click of button		
 function start() {
